@@ -22,4 +22,4 @@ $ git  clone  https://github.com/akara-podcast/akara-podcast-android.git
 - **Bou Phally**, ITED, RUPP (Student, E2)
 
 ## Acknowledgement
-![](fe.jfif)  ![](rupp.png)
+![](https://github.com/akara-podcast/akara-podcast/blob/master/fe.jfif)  ![](https://github.com/akara-podcast/akara-podcast/blob/master/rupp.png)
