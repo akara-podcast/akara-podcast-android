@@ -16,7 +16,7 @@ $ git  clone  https://github.com/akara-podcast/akara-podcast-android.git
 - Run
 
 ## Contributors
-- **Bun Leap**, RUPP, RUPP (Advisor)
+- **Bun Leap**, FE, RUPP (Advisor)
 - **Tan Bunchhay**, ITED, RUPP (Student, E2)
 - **Tan Seyhak**, ITED, RUPP (Student, E2)
 - **Bou Phally**, ITED, RUPP (Student, E2)
