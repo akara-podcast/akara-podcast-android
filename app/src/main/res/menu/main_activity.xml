@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuHome"
+        android:icon="@drawable/ic_home_foreground"
+        android:title="@string/home"
+        />
+    <item
+        android:id="@+id/menuTrending"
+        android:icon="@drawable/ic_trending_foreground"
+        android:title="@string/trending" />
+    <item
+        android:id="@+id/menuSearch"
+        android:icon="@drawable/ic_search_foreground"
+        android:title="@string/search" />
+    <item
+        android:id="@+id/menuFav"
+        android:icon="@drawable/ic_fav_foreground"
+        android:title="@string/favorite" />
+    <item
+        android:id="@+id/menuPlaylist"
+        android:icon="@drawable/ic_playlist_foreground"
+        android:title="@string/playlist"
+        />
+</menu>
