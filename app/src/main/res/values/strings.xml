@@ -6,4 +6,6 @@
     <string name="community">Community</string>
     <string name="playlist">Playlist</string>
     <string name="favorite">Favorite</string>
+    <string name="discover">Discover</string>
+    <string name="following">Following</string>
 </resources>

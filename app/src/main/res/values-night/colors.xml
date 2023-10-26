@@ -2,9 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="akara_primary">#5D5FEF</color>
+    <color name="akara_primary">#00EC34</color>
     <color name="silver_primary">#777676</color>
-    <color name="bg_primary">#ffffff</color>
-    <color name="bg_nav_primary">#36FFFFFF</color>
-    <color name="text_primary">#FF000000</color>
+    <color name="bg_primary">#191414</color>
+    <color name="bg_nav_primary">#36191414</color>
+    <color name="text_primary">#FFFFFFFF</color>
 </resources>
