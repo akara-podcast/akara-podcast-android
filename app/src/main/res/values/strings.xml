@@ -8,4 +8,11 @@
     <string name="favorite">Favorite</string>
     <string name="discover">Discover</string>
     <string name="following">Following</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_release_from">New release from</string>
+    <string name="kryptonite">Kryptonite</string>
+    <string name="u_re_beaufiful">You\'re beautiful and don\'t forget it!</string>
+    <string name="single_kryptonite">Single • Kryptonite</string>
+    <string name="popular_now">Popular Now</string>
 </resources>

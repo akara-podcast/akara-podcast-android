@@ -4,7 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="akara_primary">#5D5FEF</color>
     <color name="silver_primary">#777676</color>
-    <color name="bg_primary">#ffffff</color>
-    <color name="bg_nav_primary">#36FFFFFF</color>
+    <color name="bg_primary">#F3F3F3</color>
+    <color name="bg_nav_primary">#FCFFF9</color>
     <color name="text_primary">#FF000000</color>
+    <color name="text_secondary">#6D6C6C</color>
 </resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_outer"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/akara_primary"
+            app:cardCornerRadius="128dp"
+            app:cardElevation="5dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="3dp"
+                app:cardCornerRadius="128dp"
+                app:cardElevation="0dp"
+
+                tools:ignore="VisualLintBounds">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_founder"
+
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="2dp"
+            android:paddingEnd="32dp"
+            tools:ignore="RtlSymmetry">
+
+            <RadioButton
+                android:id="@+id/discover"
+                style="@style/radioButtonStyle"
+                android:background="@drawable/radio_on"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="@string/discover"
+                tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/following"
+                style="@style/radioButtonStyle"
+                android:background="@drawable/radio_off"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/following"
+                tools:ignore="TouchTargetSizeCheck" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/content">
+
+    </LinearLayout>
+
+
+</LinearLayout>
