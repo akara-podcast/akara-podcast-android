@@ -9,7 +9,6 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.akarapodcast.databinding.FragmentHomeBinding
 
-@Suppress("DEPRECATION")
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var discover: RadioButton

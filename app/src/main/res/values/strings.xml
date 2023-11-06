@@ -13,6 +13,12 @@
     <string name="new_release_from">New release from</string>
     <string name="kryptonite">Kryptonite</string>
     <string name="u_re_beaufiful">You\'re beautiful and don\'t forget it!</string>
-    <string name="single_kryptonite">Single • Kryptonite</string>
+    <string name="motivation_kryptonite">Motivation • Kryptonite</string>
     <string name="popular_now">Popular Now</string>
+    <string name="tech_talk">Tech Talk</string>
+    <string name="just_talk">Just Talk</string>
+    <string name="talk_it_out">Talk it Out!!</string>
+    <string name="technologies_is_not_about_money">Technologies is not about money</string>
+    <string name="news_talk">News Talk</string>
+    <string name="nickels_and_crime">Nickels and Crime</string>
 </resources>
