@@ -1,12 +1,8 @@
 package com.example.akarapodcast
 
 import android.os.Bundle
-import android.view.View
-import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.example.akarapodcast.R.id.discover
 import com.example.akarapodcast.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // show DiscoverFragment
-        showFragment(DiscoverFragment())
+        showFragment(HomeFragment())
     }
 
     private fun showFragment(fragment: Fragment) {
