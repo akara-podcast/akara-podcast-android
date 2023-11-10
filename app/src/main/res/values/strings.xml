@@ -8,4 +8,16 @@
     <string name="favorite">Favorite</string>
     <string name="discover">Discover</string>
     <string name="following">Following</string>
+    <string name="your_library">Your Library</string>
+    <string name="laylist">Playlist</string>
+    <string name="Playlist">Playlist</string>
+    <string name="podcasts">Podcasts</string>
+    <string name="albums">Albums</string>
+    <string name="artists">Artists</string>
+    <string name="all">ALl</string>
+    <string name="recents">Recents</string>
+    <string name="liked">Liked</string>
+    <string name="Liked">Liked</string>
+    <string name="new_episodes">New Episodes</string>
+    <string name="update_2_day_ago">Update 2 day ago</string>
 </resources>
