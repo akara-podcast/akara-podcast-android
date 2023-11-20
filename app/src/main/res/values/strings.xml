@@ -26,4 +26,14 @@
     <string name="top_podcaster">Top Podcaster</string>
     <string name="nikels">NIKELS</string>
     <string name="akara_podcast">Akara Podcast</string>
+    <string name="Liked" />
+    <string name="Playlist">Playlist</string>
+    <string name="up_2_day_ago">up 2 day ago</string>
+    <string name="new_episodes">new_episodes</string>
+    <string name="recent">recent</string>
+    <string name="all">all</string>
+    <string name="artists">artists</string>
+    <string name="albums">albums</string>
+    <string name="podcasts">podcasts</string>
+    <string name="your_library">Your library</string>
 </resources>
