@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".view.fragment.DiscoverFragment"
+    android:paddingTop="16dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--    Popular Now    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/popular_now"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_marginBottom="12dp"/>
+
+            <!--      Podcast VBox in Hbox      -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="ExtraText">
+                            <RelativeLayout
+                                android:layout_width="168dp"
+                                android:layout_height="168dp">
+                                <ImageView
+                                    android:layout_width="168dp"
+                                    android:layout_height="168dp"
+                                    android:src="@mipmap/ic_ubeutiful_foreground"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="center_vertical"
+                                        android:background="@color/overlay">
+                                        <View
+                                            android:layout_width="8dp"
+                                            android:layout_height="24dp"
+                                            android:background="@color/akara_primary" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/kryptonite"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"/>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="8dp"
+                                        android:background="@color/akara_primary" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/u_re_beaufiful"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>/
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="ExtraText">
+                            <RelativeLayout
+                                android:layout_width="168dp"
+                                android:layout_height="168dp">
+                                <ImageView
+                                    android:layout_width="168dp"
+                                    android:layout_height="168dp"
+                                    android:src="@mipmap/ic_podcast_2_foreground"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="center_vertical"
+                                        android:background="@color/overlay">
+                                        <View
+                                            android:layout_width="8dp"
+                                            android:layout_height="24dp"
+                                            android:background="@color/akara_primary" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/tech_talk"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"/>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="8dp"
+                                        android:background="@color/akara_primary" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/technologies_is_not_about_money"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="ExtraText">
+                            <RelativeLayout
+                                android:layout_width="168dp"
+                                android:layout_height="168dp">
+                                <ImageView
+                                    android:layout_width="168dp"
+                                    android:layout_height="168dp"
+                                    android:src="@mipmap/ic_podcast_3_foreground"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="center_vertical"
+                                        android:background="@color/overlay">
+                                        <View
+                                            android:layout_width="8dp"
+                                            android:layout_height="24dp"
+                                            android:background="@color/akara_primary" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/just_talk"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"/>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="8dp"
+                                        android:background="@color/akara_primary" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/talk_it_out"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>/
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="ExtraText">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="168dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/ic_podcast_1_foreground"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="center_vertical"
+                                        android:background="@color/overlay">
+                                        <View
+                                            android:layout_width="8dp"
+                                            android:layout_height="24dp"
+                                            android:background="@color/akara_primary" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/news_talk"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"/>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="8dp"
+                                        android:background="@color/akara_primary" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/nickels_and_crime"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <!--  New Release  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp">
+
+                <!--     From       -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="200dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_founder"
+
+                            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingStart="8dp"
+                        android:paddingBottom="4dp"
+                        tools:ignore="RtlSymmetry">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/new_release_from"
+                            android:textColor="@color/text_secondary"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/kryptonite"
+                            android:textColor="@color/text_primary"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:gravity="bottom"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--     Podcast      -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="168dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginTop="8dp"
+                    app:cardElevation="0dp"
+                    tools:ignore="VisualLintBounds">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="168dp"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_ubeutiful_foreground"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/u_re_beaufiful"
+                                tools:ignore="HardcodedText"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/motivation_kryptonite"
+                                android:textColor="@color/text_secondary"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:src="@drawable/ic_notfav_foreground"/>
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"/>
+                                <ImageView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:src="@drawable/ic_play_foreground" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!--    Technology    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/technology"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"/>
+            <!--      Podcast VBox in Hbox      -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="ExtraText">
+                            <RelativeLayout
+                                android:layout_width="168dp"
+                                android:layout_height="168dp">
+                                <ImageView
+                                    android:layout_width="168dp"
+                                    android:layout_height="168dp"
+                                    android:src="@mipmap/ic_ubeutiful_foreground"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="center_vertical"
+                                        android:background="@color/overlay">
+                                        <View
+                                            android:layout_width="8dp"
+                                            android:layout_height="24dp"
+                                            android:background="@color/akara_primary" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/kryptonite"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"/>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="8dp"
+                                        android:background="@color/akara_primary" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/u_re_beaufiful"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>/
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="ExtraText">
+                            <RelativeLayout
+                                android:layout_width="168dp"
+                                android:layout_height="168dp">
+                                <ImageView
+                                    android:layout_width="168dp"
+                                    android:layout_height="168dp"
+                                    android:src="@mipmap/ic_podcast_2_foreground"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="center_vertical"
+                                        android:background="@color/overlay">
+                                        <View
+                                            android:layout_width="8dp"
+                                            android:layout_height="24dp"
+                                            android:background="@color/akara_primary" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/tech_talk"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"/>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="8dp"
+                                        android:background="@color/akara_primary" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/technologies_is_not_about_money"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>/
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="ExtraText">
+                            <RelativeLayout
+                                android:layout_width="168dp"
+                                android:layout_height="168dp">
+                                <ImageView
+                                    android:layout_width="168dp"
+                                    android:layout_height="168dp"
+                                    android:src="@mipmap/ic_podcast_3_foreground"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="center_vertical"
+                                        android:background="@color/overlay">
+                                        <View
+                                            android:layout_width="8dp"
+                                            android:layout_height="24dp"
+                                            android:background="@color/akara_primary" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/just_talk"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"/>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="8dp"
+                                        android:background="@color/akara_primary" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/talk_it_out"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>/
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="ExtraText">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="168dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/ic_podcast_1_foreground"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="center_vertical"
+                                        android:background="@color/overlay">
+                                        <View
+                                            android:layout_width="8dp"
+                                            android:layout_height="24dp"
+                                            android:background="@color/akara_primary" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/news_talk"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"/>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="8dp"
+                                        android:background="@color/akara_primary" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/nickels_and_crime"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <!--    Comedy    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/comedy"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"/>
+            <!--      Podcast VBox in Hbox      -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="ExtraText">
+                            <RelativeLayout
+                                android:layout_width="168dp"
+                                android:layout_height="168dp">
+                                <ImageView
+                                    android:layout_width="168dp"
+                                    android:layout_height="168dp"
+                                    android:src="@mipmap/ic_ubeutiful_foreground"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="center_vertical"
+                                        android:background="@color/overlay">
+                                        <View
+                                            android:layout_width="8dp"
+                                            android:layout_height="24dp"
+                                            android:background="@color/akara_primary" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/kryptonite"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"/>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="8dp"
+                                        android:background="@color/akara_primary" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/u_re_beaufiful"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>/
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="ExtraText">
+                            <RelativeLayout
+                                android:layout_width="168dp"
+                                android:layout_height="168dp">
+                                <ImageView
+                                    android:layout_width="168dp"
+                                    android:layout_height="168dp"
+                                    android:src="@mipmap/ic_podcast_2_foreground"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="center_vertical"
+                                        android:background="@color/overlay">
+                                        <View
+                                            android:layout_width="8dp"
+                                            android:layout_height="24dp"
+                                            android:background="@color/akara_primary" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/tech_talk"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"/>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="8dp"
+                                        android:background="@color/akara_primary" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/technologies_is_not_about_money"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>/
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="ExtraText">
+                            <RelativeLayout
+                                android:layout_width="168dp"
+                                android:layout_height="168dp">
+                                <ImageView
+                                    android:layout_width="168dp"
+                                    android:layout_height="168dp"
+                                    android:src="@mipmap/ic_podcast_3_foreground"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="center_vertical"
+                                        android:background="@color/overlay">
+                                        <View
+                                            android:layout_width="8dp"
+                                            android:layout_height="24dp"
+                                            android:background="@color/akara_primary" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/just_talk"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"/>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="8dp"
+                                        android:background="@color/akara_primary" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/talk_it_out"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>/
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:ignore="VisualLintBounds">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="ExtraText">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="168dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/ic_podcast_1_foreground"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="8dp"
+                                        android:gravity="center_vertical"
+                                        android:background="@color/overlay">
+                                        <View
+                                            android:layout_width="8dp"
+                                            android:layout_height="24dp"
+                                            android:background="@color/akara_primary" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:text="@string/news_talk"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"/>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="8dp"
+                                        android:background="@color/akara_primary" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/nickels_and_crime"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <!--    Top Podcaster    -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/top_podcaster"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--         Akara Podcast        -->
+                    <LinearLayout
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="16dp"
+                        tools:ignore="ExtraText">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="168dp"
+                            android:layout_height="168dp"
+                            android:layout_gravity="center"
+                            app:cardCornerRadius="300dp"
+                            tools:ignore="VisualLintBounds">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_akara_podcast_foreground" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAlignment="center"
+                            android:text="@string/akara_podcast"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:textSize="14sp"/>/
+
+                    </LinearLayout>
+
+                    <!--         Tech Talk         -->
+                    <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            tools:ignore="ExtraText">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="168dp"
+                                android:layout_height="168dp"
+                                android:layout_gravity="center"
+                                app:cardCornerRadius="300dp"
+                                tools:ignore="VisualLintBounds">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/ic_podcast_2_foreground" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAlignment="center"
+                                android:text="@string/tech_talk"
+                                android:textColor="@color/text_primary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"
+                                android:textSize="14sp"/>/
+
+                        </LinearLayout>
+
+                    <!--         Nikels         -->
+                    <LinearLayout
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="16dp"
+                        tools:ignore="ExtraText">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="168dp"
+                            android:layout_height="168dp"
+                            android:layout_gravity="center"
+                            app:cardCornerRadius="300dp"
+                            tools:ignore="VisualLintBounds">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_podcast_1_foreground" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAlignment="center"
+                            android:text="@string/nikels"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:textSize="14sp"/>/
+
+                    </LinearLayout>
+
+                    <!--         Talk it out         -->
+                    <LinearLayout
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="16dp"
+                        tools:ignore="ExtraText">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="168dp"
+                            android:layout_height="168dp"
+                            android:layout_gravity="center"
+                            app:cardCornerRadius="300dp"
+                            tools:ignore="VisualLintBounds">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_podcast_3_foreground" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAlignment="center"
+                            android:text="@string/talk_it_out"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:textSize="14sp"/>/
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
