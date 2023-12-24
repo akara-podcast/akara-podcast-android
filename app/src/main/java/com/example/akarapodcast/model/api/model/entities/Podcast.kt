@@ -1,10 +1,10 @@
-package com.example.akarapodcast.model.api.model
+package com.example.akarapodcast.model.api.model.entities
 
 import com.google.gson.annotations.SerializedName
 
 data class Podcast (
     @SerializedName("id")
-    val id: Int,
+    val id: String,
     @SerializedName("podcastTitle")
     val title: String,
     @SerializedName("podcastDescription")

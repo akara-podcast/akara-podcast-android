@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.akarapodcast.databinding.ViewHolderPodcastVboxBinding
-import com.example.akarapodcast.model.api.model.Podcast
+import com.example.akarapodcast.model.api.model.entities.Podcast
 import com.squareup.picasso.Picasso
 import java.io.IOException
 

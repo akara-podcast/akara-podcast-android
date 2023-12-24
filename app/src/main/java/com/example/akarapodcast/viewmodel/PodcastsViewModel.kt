@@ -3,7 +3,7 @@ package com.example.akarapodcast.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.akarapodcast.model.api.model.ApiData
-import com.example.akarapodcast.model.api.model.Podcast
+import com.example.akarapodcast.model.api.model.entities.Podcast
 import com.example.akarapodcast.model.api.model.Status
 import com.example.akarapodcast.model.api.service.ApiService
 import retrofit2.Call
