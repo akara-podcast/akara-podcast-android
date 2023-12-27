@@ -1,7 +1,9 @@
 package com.example.akarapodcast.view.fragment
 
-import android.content.Intent
+import android.annotation.SuppressLint
+import android.content.Context
 import android.media.MediaPlayer
+import android.media.MediaPlayer.OnCompletionListener
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,8 +19,10 @@ import com.example.akarapodcast.adapter.PodcastsAdapter
 import com.example.akarapodcast.databinding.FragmentDiscoverBinding
 import com.example.akarapodcast.model.api.model.Status
 import com.example.akarapodcast.model.api.model.entities.Podcast
+import com.example.akarapodcast.other.OnDataPass
 import com.example.akarapodcast.viewmodel.PodcastsViewModel
 import com.squareup.picasso.Picasso
+
 
 class DiscoverFragment : Fragment() {
 
@@ -29,6 +33,8 @@ class DiscoverFragment : Fragment() {
     private val adapter = PodcastsAdapter()
 
     private var isPlaying = false
+
+    private lateinit var dataPasser: OnDataPass
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -83,7 +89,15 @@ class DiscoverFragment : Fragment() {
         }
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        dataPasser = context as OnDataPass
+    }
+
+    @SuppressLint("SetTextI18n")
     private fun showRelease(podcast: Podcast) {
+        val mediaPLayer = MediaPlayer.create(requireContext(), podcast.podcastUrl.toUri())
+
         // bind image to recycle view
         Picasso.get().load(podcast.imageUrl).into(binding.podcastImg)
 
@@ -92,14 +106,15 @@ class DiscoverFragment : Fragment() {
 
         binding.title.text = podcast.title
 
-        binding.category.text = podcast.category
+        binding.category.text = podcast.category +" • "+  mediaPLayer.duration/3600 + " mins"
 
         binding.podcasterName.text = podcast.podcaster
 
-        val mediaPLayer = MediaPlayer.create(requireContext(), podcast.podcastUrl.toUri())
-
         binding.playPauseBtn.setOnClickListener{
             if (!isPlaying){
+                // pass data
+                dataPasser.onDataPass(podcast, mediaPLayer, binding, null)
+
                 mediaPLayer.start()
                 binding.playPauseBtn.setImageResource(R.drawable.ic_pause_foreground)
                 isPlaying = true
