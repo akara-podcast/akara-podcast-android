@@ -172,6 +172,7 @@
                                     android:layout_weight="1" />
 
                                 <ImageView
+                                    android:id="@+id/playPauseBtn"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:src="@drawable/ic_play_foreground" />
