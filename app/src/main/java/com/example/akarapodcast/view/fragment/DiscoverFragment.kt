@@ -1,5 +1,6 @@
 package com.example.akarapodcast.view.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -61,11 +62,18 @@ class DiscoverFragment : Fragment() {
             }
         }
 
+
+
         binding.recycleViewPodcast.adapter = adapter
         binding.recycleViewPodcastTech.adapter = adapter
         binding.recycleViewPodcastComedy.adapter = adapter
         viewModel.loadPodcasts()
 
+        adapter.onClickListener = {
+            Toast.makeText(requireContext(), it.title, Toast.LENGTH_LONG).show()
+            val intent = Intent(requireContext(), DiscoverFragment::class.java)
+            intent.putExtra("podcast", it)
+        }
     }
 
     private fun showRelease(podcast: Podcast) {

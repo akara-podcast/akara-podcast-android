@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@color/bg_primary"
     >
@@ -21,7 +20,7 @@
         android:background="@color/bg_nav_primary"
         app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyle"
         app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
-        app:itemIconSize="48dp"
+        app:itemIconSize="42dp"
         app:itemIconTint="@color/akara_primary"
         app:itemTextColor="@color/text_primary"
         app:labelVisibilityMode="labeled"

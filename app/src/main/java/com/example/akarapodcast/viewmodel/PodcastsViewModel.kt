@@ -1,6 +1,8 @@
 package com.example.akarapodcast.viewmodel
 
+import android.content.Context
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -42,5 +44,9 @@ class PodcastsViewModel : ViewModel() {
                 _podcastsData.postValue(apiData)
             }
         }
+    }
+
+    fun showDetail(mediaItem: Podcast, context: Context){
+        Toast.makeText(context, mediaItem.title, Toast.LENGTH_LONG).show()
     }
 }

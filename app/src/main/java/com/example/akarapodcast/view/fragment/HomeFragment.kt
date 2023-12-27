@@ -19,7 +19,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         replaceFragment(DiscoverFragment())
         return binding.root
@@ -69,10 +69,10 @@ class HomeFragment : Fragment() {
     private fun replaceFragment(fragment: Fragment){
 
         // FragmentManager
-        val fragmentManager = fragmentManager
+        val fragmentManager = childFragmentManager
 
         // FragmentTransaction
-        val fragmentTransaction = fragmentManager!!.beginTransaction()
+        val fragmentTransaction = fragmentManager.beginTransaction()
 
         // Replace HomeFragment in lytFragment
         fragmentTransaction.replace(binding.content.id, fragment)
