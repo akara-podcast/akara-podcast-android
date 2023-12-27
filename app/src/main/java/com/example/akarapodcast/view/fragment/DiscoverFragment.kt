@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.akarapodcast.R
 import com.example.akarapodcast.adapter.PodcastsAdapter
 import com.example.akarapodcast.databinding.FragmentDiscoverBinding
 import com.example.akarapodcast.model.api.model.Status
@@ -70,9 +72,10 @@ class DiscoverFragment : Fragment() {
         viewModel.loadPodcasts()
 
         adapter.onClickListener = {
-            Toast.makeText(requireContext(), it.title, Toast.LENGTH_LONG).show()
-            val intent = Intent(requireContext(), DiscoverFragment::class.java)
-            intent.putExtra("podcast", it)
+            // create bundle to pass to next fragment
+            val bundle = Bundle()
+            bundle.putParcelable("podcast", it)
+            findNavController().navigate(R.id.action_discoverFragment_to_podcastDetailedFragment, bundle)
         }
     }
 

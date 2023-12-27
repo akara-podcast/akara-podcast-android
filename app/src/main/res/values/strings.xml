@@ -36,4 +36,6 @@
     <string name="albums">albums</string>
     <string name="podcasts">podcasts</string>
     <string name="your_library">Your library</string>
+    <string name="pf">pf</string>
+    <string name="back">back</string>
 </resources>

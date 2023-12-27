@@ -21,7 +21,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-        replaceFragment(DiscoverFragment())
+        //        replaceFragment(DiscoverFragment())
         return binding.root
     }
 
@@ -75,7 +75,7 @@ class HomeFragment : Fragment() {
         val fragmentTransaction = fragmentManager.beginTransaction()
 
         // Replace HomeFragment in lytFragment
-        fragmentTransaction.replace(binding.content.id, fragment)
+        fragmentTransaction.replace(binding.lytFragmentNav.id, fragment)
 
         // Commit transaction
         fragmentTransaction.commit()
