@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/discoverFragment">
+
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.example.akarapodcast.view.fragment.DiscoverFragment"
+        android:label="fragment_discover"
+        tools:layout="@layout/fragment_discover" >
+        <action
+            android:id="@+id/action_discoverFragment_to_podcastDetailedFragment"
+            app:destination="@id/podcastDetailedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/podcastDetailedFragment"
+        android:name="com.example.akarapodcast.view.fragment.PodcastDetailedFragment"
+        android:label="PodcastDetailedFragment" >
+        <argument
+            android:name="podcast"
+            app:argType="com.example.akarapodcast.model.api.model.entities.Podcast" />
+        <action
+            android:id="@+id/action_podcastDetailedFragment_to_discoverFragment"
+            app:destination="@id/discoverFragment" />
+    </fragment>
+</navigation>
