@@ -1,16 +1,19 @@
 package com.example.akarapodcast.view.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.akarapodcast.adapter.PodcastsAdapter
 import com.example.akarapodcast.databinding.FragmentDiscoverBinding
 import com.example.akarapodcast.model.api.model.Status
+import com.example.akarapodcast.model.api.model.entities.Podcast
 import com.example.akarapodcast.viewmodel.PodcastsViewModel
+import com.squareup.picasso.Picasso
 
 class DiscoverFragment : Fragment() {
 
@@ -26,10 +29,8 @@ class DiscoverFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentDiscoverBinding.inflate(inflater, container, false)
-
         return binding.root
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -47,9 +48,16 @@ class DiscoverFragment : Fragment() {
         viewModel.podcastData.observe(viewLifecycleOwner) {
 
             when (it.status){
-                Status.PROCESSING -> Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
-                Status.SUCCESS -> adapter.submitList(it.data)
-                Status.ERROR -> Toast.makeText(requireContext(), "Error while loading data from server", Toast.LENGTH_LONG).show()
+                Status.PROCESSING -> binding.discoverProgress.isVisible = true
+                Status.SUCCESS -> {
+                    binding.discoverProgress.isVisible = false
+                    adapter.submitList(it.data)
+                    it.data?.let { it1 -> showRelease(it1[0]) }
+                }
+                Status.ERROR -> {
+                    binding.discoverProgress.isVisible = false
+                    Toast.makeText(requireContext(), "Error while loading data from server", Toast.LENGTH_LONG).show()
+                }
             }
         }
 
@@ -58,6 +66,20 @@ class DiscoverFragment : Fragment() {
         binding.recycleViewPodcastComedy.adapter = adapter
         viewModel.loadPodcasts()
 
+    }
+
+    private fun showRelease(podcast: Podcast) {
+        // bind image to recycle view
+        Picasso.get().load(podcast.imageUrl).into(binding.podcastImg)
+
+        // bind podcaster image to recycle view
+        Picasso.get().load(podcast.imageUrl).into(binding.podcasterImg)
+
+        binding.title.text = podcast.title
+
+        binding.category.text = podcast.category
+
+        binding.podcasterName.text = podcast.podcaster
     }
 
 }

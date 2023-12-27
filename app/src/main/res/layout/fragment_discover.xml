@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,9 +8,25 @@
     android:paddingTop="16dp"
     tools:context=".view.fragment.DiscoverFragment">
 
+    <ProgressBar
+        android:id="@+id/discoverProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="360dp"
+        tools:visibility="visible" />
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <LinearLayout
@@ -40,72 +56,77 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="32dp">
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
 
                 <!--     From       -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="200dp"
+                        tools:ignore="VisualLintBounds"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
-                        android:layout_gravity="center"
-                        app:cardCornerRadius="200dp"
-                        tools:ignore="VisualLintBounds">
+                        android:layout_gravity="center">
 
-                        <ImageButton
+                        <ImageView
+                            android:id="@+id/podcasterImg"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@mipmap/ic_founder"
-
-                            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                            tools:src="@mipmap/ic_founder" />
                     </androidx.cardview.widget.CardView>
+
                     <LinearLayout
+                        tools:ignore="RtlSymmetry"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:paddingStart="8dp"
-                        android:paddingBottom="4dp"
-                        tools:ignore="RtlSymmetry">
+                        android:paddingBottom="4dp">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/new_release_from"
-                            android:textColor="@color/text_secondary"/>
+                            android:textColor="@color/text_secondary" />
 
                         <TextView
+                            android:id="@+id/podcasterName"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="@string/kryptonite"
+                            android:gravity="bottom"
+                            tools:text="@string/kryptonite"
                             android:textColor="@color/text_primary"
                             android:textSize="24sp"
-                            android:textStyle="bold"
-                            android:gravity="bottom"/>
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                 </LinearLayout>
 
                 <!--     Podcast      -->
                 <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    tools:ignore="VisualLintBounds"
                     android:layout_width="match_parent"
                     android:layout_height="168dp"
                     android:layout_gravity="center"
-                    app:cardCornerRadius="8dp"
-                    android:layout_marginTop="8dp"
-                    app:cardElevation="0dp"
-                    tools:ignore="VisualLintBounds">
+                    android:layout_marginTop="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
+
                         <ImageView
+                            android:id="@+id/podcastImg"
                             android:layout_width="168dp"
                             android:layout_height="match_parent"
-                            android:src="@mipmap/ic_ubeutiful_foreground"
-                            />
+                            tools:src="@mipmap/ic_ubeutiful_foreground" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -113,39 +134,44 @@
                             android:padding="16dp">
 
                             <TextView
+                                android:id="@+id/title"
+                                tools:ignore="HardcodedText"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/u_re_beaufiful"
-                                tools:ignore="HardcodedText"
-                                android:textStyle="bold"
+                                tools:text="@string/u_re_beaufiful"
                                 android:textColor="@color/text_primary"
-                                android:textSize="16sp"/>
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
                             <TextView
+                                android:id="@+id/category"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:text="@string/motivation_kryptonite"
-                                android:textColor="@color/text_secondary"/>
+                                tools:text="@string/motivation_kryptonite"
+                                android:textColor="@color/text_secondary" />
 
                             <View
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="1"/>
+                                android:layout_weight="1" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:gravity="center_vertical">
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
 
                                 <ImageView
                                     android:layout_width="32dp"
                                     android:layout_height="32dp"
-                                    android:src="@drawable/ic_notfav_foreground"/>
+                                    android:src="@drawable/ic_notfav_foreground" />
+
                                 <View
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="1"/>
+                                    android:layout_weight="1" />
+
                                 <ImageView
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
@@ -163,12 +189,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
                 android:text="@string/technology"
                 android:textColor="@color/text_primary"
-                android:textStyle="bold"
                 android:textSize="24sp"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="12dp"/>
+                android:textStyle="bold" />
             <!--      Podcast VBox in Hbox      -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycleViewPodcastTech"
@@ -181,12 +207,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
                 android:text="@string/comedy"
                 android:textColor="@color/text_primary"
-                android:textStyle="bold"
                 android:textSize="24sp"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="12dp"/>
+                android:textStyle="bold" />
             <!--      Podcast VBox in Hbox      -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycleViewPodcastComedy"
@@ -199,12 +225,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
                 android:text="@string/top_podcaster"
                 android:textColor="@color/text_primary"
-                android:textStyle="bold"
                 android:textSize="24sp"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="12dp"/>
+                android:textStyle="bold" />
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
@@ -219,9 +246,10 @@
                     <LinearLayout
                         android:layout_width="168dp"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
                         tools:ignore="ExtraText">
+
                         <androidx.cardview.widget.CardView
                             android:layout_width="168dp"
                             android:layout_height="168dp"
@@ -238,12 +266,12 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:text="@string/akara_podcast"
-                            android:textColor="@color/text_primary"
                             android:layout_marginStart="4dp"
                             android:layout_marginTop="8dp"
-                            android:textSize="14sp"/>/
+                            android:text="@string/akara_podcast"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />/
 
                     </LinearLayout>
 
@@ -251,9 +279,10 @@
                     <LinearLayout
                         android:layout_width="168dp"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
                         tools:ignore="ExtraText">
+
                         <androidx.cardview.widget.CardView
                             android:layout_width="168dp"
                             android:layout_height="168dp"
@@ -270,12 +299,12 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:text="@string/tech_talk"
-                            android:textColor="@color/text_primary"
                             android:layout_marginStart="4dp"
                             android:layout_marginTop="8dp"
-                            android:textSize="14sp"/>/
+                            android:text="@string/tech_talk"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />/
 
                     </LinearLayout>
 
@@ -283,9 +312,10 @@
                     <LinearLayout
                         android:layout_width="168dp"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
                         tools:ignore="ExtraText">
+
                         <androidx.cardview.widget.CardView
                             android:layout_width="168dp"
                             android:layout_height="168dp"
@@ -302,12 +332,12 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:text="@string/nikels"
-                            android:textColor="@color/text_primary"
                             android:layout_marginStart="4dp"
                             android:layout_marginTop="8dp"
-                            android:textSize="14sp"/>/
+                            android:text="@string/nikels"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />/
 
                     </LinearLayout>
 
@@ -315,9 +345,10 @@
                     <LinearLayout
                         android:layout_width="168dp"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
                         tools:ignore="ExtraText">
+
                         <androidx.cardview.widget.CardView
                             android:layout_width="168dp"
                             android:layout_height="168dp"
@@ -334,12 +365,12 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:text="@string/talk_it_out"
-                            android:textColor="@color/text_primary"
                             android:layout_marginStart="4dp"
                             android:layout_marginTop="8dp"
-                            android:textSize="14sp"/>/
+                            android:text="@string/talk_it_out"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />/
 
                     </LinearLayout>
 
@@ -353,4 +384,4 @@
     </androidx.core.widget.NestedScrollView>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,8 @@ import retrofit2.http.GET
 interface ApiService {
 
     @GET("Parameow3/Parameow3/main/podcast.json")
-    fun getPodcastList(): Call<List<Podcast>>
+    suspend fun getPodcastList(): List<Podcast>
 
-
+    @GET("Parameow3/Parameow3/main/release.json")
+    suspend fun getNewRelease(): Podcast
 }

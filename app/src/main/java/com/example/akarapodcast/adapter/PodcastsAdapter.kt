@@ -10,7 +10,6 @@ import com.example.akarapodcast.model.api.model.entities.Podcast
 import com.squareup.picasso.Picasso
 import java.io.IOException
 
-@Suppress("DEPRECATED_IDENTITY_EQUALS")
 class PodcastsAdapter() : ListAdapter<Podcast, PodcastsAdapter.PodcastViewHolder>(object :
     DiffUtil.ItemCallback<Podcast>() {
     override fun areItemsTheSame(oldItem: Podcast, newItem: Podcast): Boolean {
@@ -18,7 +17,7 @@ class PodcastsAdapter() : ListAdapter<Podcast, PodcastsAdapter.PodcastViewHolder
     }
 
     override fun areContentsTheSame(oldItem: Podcast, newItem: Podcast): Boolean {
-        return oldItem.id === newItem.id
+        return oldItem.id == newItem.id
     }
 }) {
 
