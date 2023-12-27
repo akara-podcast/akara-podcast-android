@@ -1,9 +1,11 @@
 package com.example.akarapodcast.view.fragment
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -18,6 +20,8 @@ class PodcastDetailedFragment : Fragment() {
     lateinit var podcast: Podcast
 
     private val navigateArgs: PodcastDetailedFragmentArgs by navArgs()
+
+    private var isPlaying = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,6 +61,20 @@ class PodcastDetailedFragment : Fragment() {
         binding.description.text = podcast.description
 
         binding.podcaster.text = podcast.podcaster
+
+        val mediaPLayer = MediaPlayer.create(requireContext(), podcast.podcastUrl.toUri())
+
+        binding.playBtn.setOnClickListener{
+            if (!isPlaying){
+                mediaPLayer.start()
+                binding.playBtn.setImageResource(R.drawable.ic_pause_foreground)
+                isPlaying = true
+            } else {
+                mediaPLayer.pause()
+                binding.playBtn.setImageResource(R.drawable.ic_play_foreground)
+                isPlaying = false
+            }
+        }
     }
 
 }

@@ -1,11 +1,13 @@
 package com.example.akarapodcast.view.fragment
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.net.toUri
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -25,6 +27,8 @@ class DiscoverFragment : Fragment() {
     private val viewModel = PodcastsViewModel()
 
     private val adapter = PodcastsAdapter()
+
+    private var isPlaying = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -91,6 +95,20 @@ class DiscoverFragment : Fragment() {
         binding.category.text = podcast.category
 
         binding.podcasterName.text = podcast.podcaster
+
+        val mediaPLayer = MediaPlayer.create(requireContext(), podcast.podcastUrl.toUri())
+
+        binding.playPauseBtn.setOnClickListener{
+            if (!isPlaying){
+                mediaPLayer.start()
+                binding.playPauseBtn.setImageResource(R.drawable.ic_pause_foreground)
+                isPlaying = true
+            } else {
+                mediaPLayer.pause()
+                binding.playPauseBtn.setImageResource(R.drawable.ic_play_foreground)
+                isPlaying = false
+            }
+        }
     }
 
 }
