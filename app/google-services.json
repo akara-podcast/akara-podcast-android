@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "394263164378",
+    "project_id": "akarapodcast-kh",
+    "storage_bucket": "akarapodcast-kh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394263164378:android:e95bc914df2fd8c016fce3",
+        "android_client_info": {
+          "package_name": "com.example.akarapodcast"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFfSn8ulASCArJyJDmknmUofOkJsO4IyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
