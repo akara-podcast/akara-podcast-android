@@ -21,6 +21,8 @@ class PodcastsAdapter() : ListAdapter<Podcast, PodcastsAdapter.PodcastViewHolder
     }
 }) {
 
+    var onClickListener: ((Podcast) -> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PodcastViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val binding: ViewHolderPodcastVboxBinding =
@@ -33,6 +35,9 @@ class PodcastsAdapter() : ListAdapter<Podcast, PodcastsAdapter.PodcastViewHolder
         val item: Podcast = getItem(position)
         try {
             holder.bind(item)
+            holder.itemView.setOnClickListener {
+                onClickListener?.invoke(item)
+            }
         } catch (e: IOException) {
             throw RuntimeException(e)
         }
@@ -40,6 +45,7 @@ class PodcastsAdapter() : ListAdapter<Podcast, PodcastsAdapter.PodcastViewHolder
 
     class PodcastViewHolder(private var itemBinding: ViewHolderPodcastVboxBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
+
         fun bind(podcast: Podcast) {
             // bind image to recycle view
             Picasso.get().load(podcast.imageUrl).into(itemBinding.imgPodcast)
