@@ -21,6 +21,10 @@
     </style>
     <!--     text background -->
     <style name="TEXT">
-        <item name="android:textColor">#000</item>
+        <item name="android:textColor">#00EC34</item>
     </style>
+    <style name="TEXTNIGHT">
+        <item name="textFillColor">#fff</item>
+    </style>
+
 </resources>
