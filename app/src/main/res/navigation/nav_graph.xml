@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_discoverFragment_to_podcastDetailedFragment"
             app:destination="@id/podcastDetailedFragment" />
+        <action
+            android:id="@+id/action_discoverFragment_to_podcastFragment2"
+            app:destination="@id/podcastFragment" />
     </fragment>
     <fragment
         android:id="@+id/podcastDetailedFragment"
@@ -25,4 +28,13 @@
             android:id="@+id/action_podcastDetailedFragment_to_discoverFragment"
             app:destination="@id/discoverFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/podcastFragment"
+        android:name="com.example.akarapodcast.view.fragment.PodcastFragment"
+        android:label="PodcastFragment" >
+        <action
+            android:id="@+id/action_podcastFragment_to_discoverFragment"
+            app:destination="@id/discoverFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_podcastFragment" app:destination="@id/podcastFragment"/>
 </navigation>
