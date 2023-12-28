@@ -22,4 +22,8 @@
     <style name="TEXT">
         <item name="android:textColor">#000</item>
     </style>
+    <style name="TEXTNIGHT">
+        <item name="textFillColor">#000</item>
+    </style>
+
 </resources>
