@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:layout_marginTop="8dp"
     android:background="@color/bg_primary"
-    tools:context=".view.fragment.FollowingFragment"
-    android:layout_marginTop="8dp">
+    android:orientation="vertical"
+    tools:context=".view.fragment.FollowingFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -98,25 +98,398 @@
             <!--     Short Preview       -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="536dp"
+                android:layout_marginHorizontal="8dp"
                 android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
                 app:cardCornerRadius="16dp">
-                
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp">
+
+                    <!--      Podcast Image + anime      -->
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="200dp">
+                        android:layout_height="320dp">
 
+                        <ImageView
+                            android:id="@+id/animateAudio"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="200dp"
+                                android:layout_height="200dp"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/ic_podcast_3_foreground" />
+                            </androidx.cardview.widget.CardView>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
                     </RelativeLayout>
-                    
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/u_re_beaufiful"
+                        android:textColor="@color/text_primary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/motivation_kryptonite"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="16sp" />
+
+                    <!--  Description -->
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/i_m_sorry_to_hear_that_you_ve_been_unwell_please_take_all_the_time_you_need_to_rest_and_recover_your_health_is_the_most_important_thing_i_hope_you_re_feeling_better_soon_n_nthank_you_for_your_understanding_during_the_holiday_season_i_m_ready_to_get_back_to_work_on_our_projects_as_soon_as_you_are_in_the_meantime_please_let_me_know_if_there_s_anything_i_can_do_to_help_or_prepare_n_nwishing_you_a_speedy_recovery_and_a_happy_holiday_season_n_nbest_regards"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/playBtn" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/love"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_notfav_foreground" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <!--         Timer       -->
+                        <TextView
+                            android:id="@+id/duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="@string/dec_25_24_mins"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="16sp" />
+
+                        <!--         Playy       -->
+                        <ImageView
+                            android:id="@+id/play"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/ic_play_foreground" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
-                
+
+            </androidx.cardview.widget.CardView>
+
+            <!--     Short Preview       -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="536dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp">
+
+                    <!--      Podcast Image + anime      -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="320dp">
+
+                        <ImageView
+                            android:id="@+id/aniAudio"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="250dp"
+                                android:layout_height="250dp"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:layout_width="250dp"
+                                    android:layout_height="250dp"
+                                    android:src="@mipmap/ic_podcast_2_foreground" />
+                            </androidx.cardview.widget.CardView>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/u_re_beaufiful"
+                        android:textColor="@color/text_primary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/motivation_kryptonite"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="16sp" />
+
+                    <!--  Description -->
+                    <TextView
+                        android:id="@+id/description1"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/i_m_sorry_to_hear_that_you_ve_been_unwell_please_take_all_the_time_you_need_to_rest_and_recover_your_health_is_the_most_important_thing_i_hope_you_re_feeling_better_soon_n_nthank_you_for_your_understanding_during_the_holiday_season_i_m_ready_to_get_back_to_work_on_our_projects_as_soon_as_you_are_in_the_meantime_please_let_me_know_if_there_s_anything_i_can_do_to_help_or_prepare_n_nwishing_you_a_speedy_recovery_and_a_happy_holiday_season_n_nbest_regards"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/playBtn" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/love1"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_notfav_foreground" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <!--         Timer       -->
+                        <TextView
+                            android:id="@+id/duration1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="@string/dec_25_24_mins"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="16sp" />
+
+                        <!--         Playy       -->
+                        <ImageView
+                            android:id="@+id/play1"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/ic_play_foreground" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--     Short Preview 2      -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="536dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp">
+
+                    <!--      Podcast Image + anime      -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="320dp">
+
+                        <ImageView
+                            android:id="@+id/animateAudio1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="250dp"
+                                android:layout_height="250dp"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:layout_width="250dp"
+                                    android:layout_height="250dp"
+                                    android:src="@mipmap/ic_podcast_1_foreground" />
+                            </androidx.cardview.widget.CardView>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/u_re_beaufiful"
+                        android:textColor="@color/text_primary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/title2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/motivation_kryptonite"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="16sp" />
+
+                    <!--  Description -->
+                    <TextView
+                        android:id="@+id/description2"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/i_m_sorry_to_hear_that_you_ve_been_unwell_please_take_all_the_time_you_need_to_rest_and_recover_your_health_is_the_most_important_thing_i_hope_you_re_feeling_better_soon_n_nthank_you_for_your_understanding_during_the_holiday_season_i_m_ready_to_get_back_to_work_on_our_projects_as_soon_as_you_are_in_the_meantime_please_let_me_know_if_there_s_anything_i_can_do_to_help_or_prepare_n_nwishing_you_a_speedy_recovery_and_a_happy_holiday_season_n_nbest_regards"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/playBtn" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/love2"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_notfav_foreground" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <!--         Timer       -->
+                        <TextView
+                            android:id="@+id/duration2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="@string/dec_25_24_mins"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="16sp" />
+
+                        <!--         Playy       -->
+                        <ImageView
+                            android:id="@+id/play2"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/ic_play_foreground" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
