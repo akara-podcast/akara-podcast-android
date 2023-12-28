@@ -13,4 +13,13 @@
 
 
     <style name="Theme.AkaraPodcastandroid" parent="Base.Theme.AkaraPodcastandroid" />
+
+    <!--     Light mod -->
+    <style name="SCREEN">
+        <item name="android:background">#fff</item>
+    </style>
+    <!--     text background -->
+    <style name="TEXT">
+        <item name="android:textColor">#000</item>
+    </style>
 </resources>

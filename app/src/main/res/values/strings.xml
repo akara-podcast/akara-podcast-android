@@ -42,4 +42,9 @@
     <string name="more">more</string>
     <string name="_0_00">0:00</string>
     <string name="_1_10_00">1:10:00</string>
+    <string name="New_Episodes">New Episodes</string>
+    <string name="resents">Recents</string>
+    <string name="liked">Liked</string>
+    <string name="Give_your_playlist_name">Give your playlist name\n</string>
+    <string name="my_playlist">My Playlist</string>
 </resources>
