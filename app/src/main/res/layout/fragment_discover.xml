@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="16dp"
+    android:background="@color/bg_primary"
     tools:context=".view.fragment.DiscoverFragment">
 
     <ProgressBar

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg_primary"
+    android:paddingTop="8dp">
+
+    <ProgressBar
+        android:id="@+id/loadingProgress"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <!--  Header  -->
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:contentDescription="@string/back"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/playing_from_podcast"
+            android:textColor="@color/text_secondary" />
+
+        <TextView
+            android:id="@+id/podcaster_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kryptonite"
+            android:textColor="@color/text_primary" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/love"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="6dp"
+        android:src="@drawable/ic_notfav_foreground"
+        app:layout_constraintBottom_toBottomOf="@+id/backBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backBtn"
+        android:contentDescription="@string/more" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/backBtn"
+        android:layout_marginTop="32dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_primary"
+            android:layout_marginBottom="36dp"
+            android:paddingBottom="128dp">
+
+
+            <!--  Image  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="370dp"
+                android:layout_height="370dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="VisualLintBounds">
+
+                <ImageView
+                    android:id="@+id/podcastImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/pf"
+                    tools:src="@mipmap/ic_founder" />
+            </androidx.cardview.widget.CardView>
+
+    <!--  Title  -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:text="@string/u_re_beaufiful" />
+
+    <!--  Podcaster  -->
+    <LinearLayout
+        android:id="@+id/podcasterLl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="2dp"
+            tools:ignore="VisualLintBounds">
+
+            <ImageView
+                android:id="@+id/podcasterImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/pf"
+                tools:src="@mipmap/ic_founder" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/podcaster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="@string/kryptonite" />
+
+    </LinearLayout>
+
+    <!--  Category -->
+            <TextView
+                android:id="@+id/categoryDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/podcasterLl"
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintTop_toTopOf="@+id/podcasterLl"
+                tools:text="Category" />
+
+    <!--  Util  -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:progressTint="@color/akara_primary"
+        android:thumbTint="@color/akara_primary"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/podcasterLl"
+        app:layout_constraintTop_toBottomOf="@+id/podcasterLl" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0_00"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_1_10_00"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <ImageView
+        android:id="@+id/playBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_play_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/forward"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_forward_10"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/playBtn"
+        app:layout_constraintStart_toEndOf="@+id/playBtn"
+        app:layout_constraintTop_toTopOf="@+id/playBtn" />
+
+    <ImageView
+        android:id="@+id/backward"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_replay_10"
+        app:layout_constraintBottom_toBottomOf="@+id/playBtn"
+
+        app:layout_constraintEnd_toStartOf="@+id/playBtn"
+        app:layout_constraintTop_toTopOf="@+id/playBtn" />
+
+
+            <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="16dp"
+        android:background="@color/akara_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playBtn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/akara_secondary"
+            android:orientation="vertical">
+
+            <!--  Description -->
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="32dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                tools:text="I'm sorry to hear that you've been unwell. Please take all the time you need to rest and recover – your health is the most important thing. I hope you're feeling better soon. \n\nThank you for your understanding during the holiday season. I'm ready to get back to work on our projects as soon as you are. In the meantime, please let me know if there's anything I can do to help or prepare. \n\nWishing you a speedy recovery and a happy holiday season. \n\nBest regards" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
